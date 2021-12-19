@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>Mayk Brito - DoWhile 2021</title>
@@ -10,6 +11,7 @@
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -19,16 +21,22 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="http://lorempixel.com.br/person" alt="Foto pessoal" />
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+            id="UserImage"
+          />
         </div>
 
         <h1 id="userName">Mayk Brito</h1>
-        <a href="https://github.com/maykbrito" target="_blank">
+        <a id="userLink" href="https://github.com/maykbrito" target="_blank">
           <img src="images/github.svg" alt="ícone github" />
-          maykbrito</a
+          <span id="userLogin">maykbrito</span></a
         >
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -55,25 +63,6 @@
       </div>
     </main>
 
-    <script>
-      const LinksSocialMedia = {
-        github: 'jakeliny',
-        youtube: 'jakelinygracielly',
-        facebook: 'maykbrito',
-        instagram: 'jakeliny.gracielly',
-        twitter: 'jakelinytec'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
